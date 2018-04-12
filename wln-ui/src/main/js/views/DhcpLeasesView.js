@@ -5,7 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import ChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
 
 
-export default class LeasesDhcpView extends Component {
+export default class DhcpLeasesView extends Component {
     render() {
         const style2 = {
             height: '98vh',
@@ -16,7 +16,7 @@ export default class LeasesDhcpView extends Component {
         return (
             <Paper transitionEnabled={false} style={style2} zDepth={2}>
                 <AppBar
-                    title="Аренда DHCP"
+                    title="Данные об арендах адресов DHCP"
                     style={{background: '#303F9F'}}
                     iconElementLeft={<IconButton
                         onClick={() =>{self.props.history.push('/');}}

@@ -6,7 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
 import PropTypes from 'prop-types';
 
-export class Home extends Component {
+export class Desktop extends Component {
     render() {
         const style = {
             display: 'inline-block',
@@ -36,7 +36,7 @@ export class Home extends Component {
                                       <MenuItem
                                           primaryText="Аренда DHCP"
                                           onClick={() => {
-                                              this.props.history.push('/LeasesDhcpView');
+                                              this.props.history.push('/DhcpLeasesView');
                                           }}
                                       />,
                                       <MenuItem
@@ -86,4 +86,4 @@ Home.contextTypes = {
  router: PropTypes.object.isRequired
 };*/
 
-export default Home
+export default Desktop

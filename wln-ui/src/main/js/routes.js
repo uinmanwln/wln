@@ -6,8 +6,8 @@ import {
     browserHistory
 } from 'react-router';
 
-import Home from './views/Home';
-import LeasesDhcpView from './views/LeasesDhcpView';
+import Home from './views/Desktop';
+import LeasesDhcpView from './views/DhcpLeasesView';
 
 export default () => (
     <Router history={browserHistory}>
