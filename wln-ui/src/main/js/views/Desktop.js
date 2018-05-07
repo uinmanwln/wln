@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
+import {Menu, MenuItem} from 'material-ui/Menu';
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
+import ArrowDropRight from '@material-ui/icons/ArrowDropDown';
 import PropTypes from 'prop-types';
 
 export class Desktop extends Component {
     render() {
+        console.log("aaaa");
         const style = {
             display: 'inline-block',
             margin: '16px 32px 16px 0',
@@ -24,58 +26,14 @@ export class Desktop extends Component {
         return (
 
             <Paper   transitionEnabled={false} style={style2} zDepth={1}>
-                <AppBar
-                    title="Центр управления сетью WestLanNet"
-                    style={{background: '#303F9F'}}
-                />
-                <Paper style={style} zDepth={3}>
-                    <Menu desktop={true} width={320}>
-                        <MenuItem primaryText="Настройка DHCP"
-                                  rightIcon={<ArrowDropRight />}
-                                  menuItems={[
-                                      <MenuItem
-                                          primaryText="Аренда DHCP"
-                                          onClick={() => {
-                                              this.props.history.push('/DhcpLeasesView');
-                                          }}
-                                      />,
-                                      <MenuItem
-                                          primaryText="Настройки адресов DHCP"
-                                      />
-                                  ]}
-                        />
-                        <MenuItem
-                            primaryText="Настройка IPTV (мультикаст)"
-                            rightIcon={<ArrowDropRight />}
-                            menuItems={[
-                                <MenuItem
-                                    primaryText="Список каналов для Eltex"
-                                />,
-                                <MenuItem
-                                    primaryText="Список каналов для Dune"
-                                />,
-                                <MenuItem
-                                    primaryText="Список каналов для ПК"
-                                />
-                            ]}
-                        />
-                        <MenuItem
-                            primaryText="Настройка IPTV (прокси)"
-                            rightIcon={<ArrowDropRight />}
-                            menuItems={[
-                                <MenuItem
-                                    primaryText="Список каналов для Eltex"
-                                />,
-                                <MenuItem
-                                    primaryText="Список каналов для Dune"
-                                />,
-                                <MenuItem
-                                    primaryText="Список каналов для ПК"
-                                />
-                            ]}
-                        />
-                    </Menu>
-                </Paper>
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography variant="title" color="inherit">
+                            Центр управления сетью WestLanNet
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+
             </Paper>
 
         )
