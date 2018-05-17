@@ -8,8 +8,12 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
     },
-    module: {
+   module: {
         rules: [
+            {
+                test: /\.js$/,
+                loader: "transform-loader?brfs"
+            },
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
@@ -20,10 +24,12 @@ module.exports = {
                 }
             }
         ]
+
     },
     devServer: {
         historyApiFallback: true,
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/main/js/index.html'

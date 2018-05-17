@@ -1,15 +1,16 @@
 import React, {Component} from 'react'
-import AppBar from 'material-ui/AppBar';
-import Paper from 'material-ui/Paper';
-import {Menu, MenuList, MenuItem} from 'material-ui/Menu';
-import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
-import Collapse from 'material-ui/transitions/Collapse';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import Paper from '@material-ui/core/Paper';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import ArrowDropRight from '@material-ui/icons/ArrowDropDown';
-import PropTypes from 'prop-types';
+
 
 export class Desktop extends Component {
 
@@ -70,7 +71,7 @@ export class Desktop extends Component {
                         </ListItem>
                         <Collapse in={this.state.isOpenDhcp} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                <ListItem button >
+                                <ListItem button  onClick={() =>{this.props.history.push('/DhcpLeasesView')}}>
                                     <ListItemText inset primary="Аренда DHCP" />
                                 </ListItem>
                                 <ListItem button>
